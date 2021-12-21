@@ -5,7 +5,7 @@ const UploadForm = () => {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
 
-  const types = ['image/png', 'image/jpeg'];
+  const types = ['image/png', 'image/jpeg', 'application/pdf'];
 
   const handleChange = (e) => {
     let selected = e.target.files[0];
@@ -15,7 +15,7 @@ const UploadForm = () => {
       setError('');
     } else {
       setFile(null);
-      setError('Please select an image file (png or jpg)');
+      setError('Please select an image file (png or jpg) OR a pdf file');
     }
   };
 

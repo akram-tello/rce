@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import Title from './comps/Title';
 import UploadForm from './comps/UploadForm';
@@ -14,6 +14,7 @@ function App() {
     logout,
   } = useAuth0();
 
+  const [selectedImg, setSelectedImg] = useState(null);
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -37,7 +38,7 @@ function App() {
     return <div className="App">
       <button onClick={loginWithRedirect}>Log in</button>
       <Title />
-      <UploadForm />
+      <UploadForm selectedImg={selectedImg} setSelectedImg={setSelectedImg}/>
     </div>;
   }
 }
