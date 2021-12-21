@@ -1,5 +1,6 @@
 import { useUser } from '@auth0/nextjs-auth0';
 import HomePage from '../components/Home';
+import UploadForm from '../components/UploadForm';
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
@@ -18,7 +19,8 @@ export default function Home() {
   return (
     <>
       <main>
-        <HomePage />
+        {/* <HomePage /> */}
+        <UploadForm />
       </main>
     </>
   )
