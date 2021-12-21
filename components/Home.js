@@ -15,6 +15,7 @@ export class Home extends Component {
     fileUploadHandler = () => {
     
     }
+    
     render() {
         return (
             <>
