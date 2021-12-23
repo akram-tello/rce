@@ -6,7 +6,7 @@ const Homepage = () => {
     <body  className="nk-body body-wider mode-onepage">
     <div  className="nk-wrap">
         <main  className="nk-pages">
-            <section  className="section pt-0 mt-0 mb-5">
+            <section  className="section pt-0 mt-0 mb-5 d-none">
                 <div  className="container">    
                     <div  className="nk-block block-partners">
                         <div  className="section-head section-head-xs">
