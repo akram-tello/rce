@@ -1,9 +1,10 @@
-import React from 'react';
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import Title from './comps/Title';
+// import Title from './comps/Title';
 import UploadForm from './comps/UploadForm';
 import Homepage from './comps/Homepage';
+import ImageGrid from './comps/ImageGrid';
+import Modal from './comps/Modal';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
         logout,
     } = useAuth0();
 
-    // const [selectedImg, setSelectedImg] = useState(null);
+    const [selectedImg, setSelectedImg] = useState(null);
 
     if (isLoading) {
         return <div>Loading...</div>;
@@ -34,7 +35,10 @@ function App() {
                     <button onClick={() => logout({ returnTo: window.location.origin })}>
                         Log out
                     </button>
-                    <Title />
+                    <ImageGrid setSelectedImg={setSelectedImg} />
+                    {selectedImg && (
+                        <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+                    )}
                     <UploadForm />
                 </div>
             </>
@@ -124,7 +128,7 @@ function App() {
                                                 <div className="col-xl-8 col-lg-10">
                                                     <div className="tc-light text-center pdb-r">
                                                         <span className="badge badge-sm badge-warning px-4 animated" data-animate="fadeInUp" data-delay="1.45">RCE Iskandar </span>
-                                                        <p  className="lead animated" data-animate="fadeInUp" data-delay="1.55">Universiti Teknologi Malaysia (UTM) and Iskandar Regional Development Authority (IRDA) are the RCE Iskandar Secretariat, offering support on the coordination and management of sustainable development activities in the Iskandar Malaysia region.</p>
+                                                        <p className="lead animated" data-animate="fadeInUp" data-delay="1.55">Universiti Teknologi Malaysia (UTM) and Iskandar Regional Development Authority (IRDA) are the RCE Iskandar Secretariat, offering support on the coordination and management of sustainable development activities in the Iskandar Malaysia region.</p>
                                                     </div>
                                                     <div className="token-status bg-white token-status-s6 shadow-dark round mb-5 animated d-none" data-animate="fadeInUp" data-delay="1.65">
                                                         {/* <h6  className="title title-xs-alt fw-4 tc-default">Round one sales ends in:</h6> */}
