@@ -107,7 +107,7 @@ function App() {
                         <div  className="banner-rounded-bg bg-theme-alt">
                             <span  className="banner-shade-1"><span  className="banner-shade-2"><span  className="banner-shade-3"></span></span></span>
                         </div>
-                        <div  className="banner-wrap">
+                        <div  className="banner-wrap h-100vh">
                             <div  className="container container-z">
                                 <div  className="row align-items-center justify-content-center">
                                     <div  className="col-lg-12 col-xl-10 text-center">
@@ -125,7 +125,7 @@ function App() {
                                             <span  className="badge badge-sm badge-warning px-4 animated" data-animate="fadeInUp" data-delay="1.45">round me</span>
                                             <h4  className="title title-md title-semibold pdt-m animated" data-animate="fadeInUp" data-delay="1.55">ICO Pre-Sale is live</h4>
                                         </div>
-                                        <div  className="token-status bg-white token-status-s6 shadow-dark round mb-5 animated" data-animate="fadeInUp" data-delay="1.65">
+                                        <div  className="token-status bg-white token-status-s6 shadow-dark round mb-5 animated d-none" data-animate="fadeInUp" data-delay="1.65">
                                             {/* <h6  className="title title-xs-alt fw-4 tc-default">Round one sales ends in:</h6> */}
                                             <div  className="countdown-s3 countdown-s5 countdown-large countdown-thin countdown" data-date="2021/08/10"></div>
                                             {/* <div  className="progress-wrap progress-wrap-point">

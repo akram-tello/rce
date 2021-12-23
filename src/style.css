@@ -6914,5 +6914,9 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 @media (min-width: 1200px) and (min-height: 900px) { .nk-preview .banner-fs, .nk-preview .nk-pages-centered { min-height: calc(100vh - 200px); } }
 
+.h-100vh{
+  height: 100vh !important;
+}
+
 /* END @iO */
 /* END @iO */
