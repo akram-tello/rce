@@ -6918,5 +6918,16 @@ ul.progress-info { display: flex; justify-content: space-between; }
   height: 100vh !important;
 }
 
+.login-btn{
+  text-decoration: none;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2a1f69;
+}
+.login-btn:hover{
+  color: #ffff;
+}
 /* END @iO */
 /* END @iO */

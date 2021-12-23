@@ -83,7 +83,7 @@ function App() {
                                                 </li>
                                             </ul>
                                             <ul className="menu-btns align-items-center animated" data-animate="fadeInDown" data-delay=".85">
-                                                <li> <span href="#" className="btn btn-rg btn-round btn-primary"><button onClick={loginWithRedirect}>Log in</button> </span></li>
+                                                <li> <span href="#" className="btn btn-rg btn-round btn-primary"><button onClick={loginWithRedirect} className='login-btn'>Log in</button> </span></li>
                                                 <li className="language-switcher toggle-wrap">
                                                     <span className="btn btn-rg btn-round btn-outline btn-primary toggle-tigger tc-light" href="#">
                                                         <img className="language-flag" src="images/flag-en.jpg" alt="en" /><span>En</span> <em className="icon ti ti-angle-down"></em>
