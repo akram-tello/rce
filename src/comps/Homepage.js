@@ -79,16 +79,15 @@ const Homepage = () => {
                         <div  className="row justify-content-center">
                             <div  className="col-lg-3 col-sm-10">
                                 <div  className="wgs animated" data-animate="fadeInUp" data-delay=".2">
-                                     <span href="#"><img src="images/logo-full-white.png" srcset="images/logo-full-white2x.png 2x" alt="logo" /> </span>
+                                    <h2 className="text-white">RCE</h2>
+                                     {/* <span href="#"><img src="images/logo-full-white.png" srcset="images/logo-full-white2x.png 2x" alt="logo" /> </span> */}
                                 </div>
                             </div> 
                             <div  className="col-lg-2 col-mb-3 col-sm-3 col-6">
                                 <div  className="wgs wgs-menu">
                                     <div  className="wgs-body">
                                         <ul  className="wgs-links wgs-links-uline wgs-links-s4 animated" data-animate="fadeInUp" data-delay=".3">
-                                            <li> <span href="#">Tokens Sales </span></li>
-                                            <li> <span href="#">Roadmap </span></li>
-                                            <li> <span href="#">What is ICOX </span></li>
+                                            <li> <span href="#"> Schools </span></li>
                                             <li> <span href="#">why / How ? </span></li>
                                             <li> <span href="#">Media </span></li>
                                         </ul>
@@ -112,9 +111,9 @@ const Homepage = () => {
                                 <div  className="wgs wgs-menu">
                                     <div  className="wgs-body">
                                         <ul  className="wgs-address animated" data-animate="fadeInUp" data-delay=".5">
-                                            <li>1330 Cooks Mine Road <br/>Twin Lakes, Mexico - 86515</li>
-                                            <li>+505-735-0177</li>
-                                            <li> <span href="#">hello@icocrypto.nio </span></li>
+                                            <li>Johor, Skudai <br/>Taman Universiti, Jalan Pendidikan 1</li>
+                                            <li>+182-390-395</li>
+                                            <li> <span href="#">hello@RCE.io </span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -129,7 +128,7 @@ const Homepage = () => {
                     <div  className="row justify-content-center align-items-center">
                         <div  className="col-md-7">
                             <div  className="copyright-text copyright-text-s3 op-70">
-                                <p><span>Copyright &copy; 2019, ICO Crypto. Template Made By Softnio &amp; Handcrafted by iO.</span></p>
+                                <p><span>Copyright &copy; 2021, RCE Iskander.</span></p>
                             </div>
                         </div>
                         <div  className="col-md-5 text-md-right">
