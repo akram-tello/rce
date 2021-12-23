@@ -35,11 +35,11 @@ function App() {
                     <button onClick={() => logout({ returnTo: window.location.origin })}>
                         Log out
                     </button>
+                    <UploadForm />
                     <ImageGrid setSelectedImg={setSelectedImg} />
                     {selectedImg && (
                         <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
                     )}
-                    <UploadForm />
                 </div>
             </>
 
