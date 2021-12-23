@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
+// import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import Title from './comps/Title';
-import UploadForm from './comps/UploadForm';
+// import Title from './comps/Title';
+// import UploadForm from './comps/UploadForm';
+import Homepage from './comps/Homepage';
 
 
 function App() {
@@ -9,12 +11,12 @@ function App() {
     isLoading,
     isAuthenticated,
     error,
-    user,
-    loginWithRedirect,
-    logout,
+    // user,
+    // loginWithRedirect,
+    // logout,
   } = useAuth0();
 
-  const [selectedImg, setSelectedImg] = useState(null);
+  // const [selectedImg, setSelectedImg] = useState(null);
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -25,21 +27,25 @@ function App() {
 
   if (isAuthenticated) {
     return (
-      <div className="App">
-        Hello {user.name}{' '}
-        <button onClick={() => logout({ returnTo: window.location.origin })}>
-          Log out
-        </button>
-        <Title />
-        <UploadForm />
-      </div>
+      <>
+        <Homepage />
+      </>
+      // <div className="App">
+      //   Hello {user.name}{' '}
+      //   <button onClick={() => logout({ returnTo: window.location.origin })}>
+      //     Log out
+      //   </button>
+      //   <Title />
+      //   <UploadForm />
+      // </div>
     );
   } else {
-    return <div className="App">
-      <button onClick={loginWithRedirect}>Log in</button>
-      <Title />
-      <UploadForm selectedImg={selectedImg} setSelectedImg={setSelectedImg}/>
-    </div>;
+    return <Homepage />;
+    // return <div className="App">
+    //   <button onClick={loginWithRedirect}>Log in</button>
+    //   <Title />
+    //   <UploadForm selectedImg={selectedImg} setSelectedImg={setSelectedImg}/>
+    // </div>;
   }
 }
 
