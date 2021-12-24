@@ -29,7 +29,59 @@ function App() {
     if (isAuthenticated) {
         return (
             <>
-                {/* <Homepage /> */}
+                <div className="header-main">
+                    <div className="header-container container">
+                        <div className="header-wrap">
+
+                            <div className="header-logo logo animated" data-animate="fadeInDown" data-delay=".65">
+                                <span href="./" className="logo-link">
+                                    <h2 className="text-white">RCE</h2>
+                                    {/* <img  className="logo-dark" src="images/logo.png" srcset="images/logo2x.png 2x" alt="logo" /> */}
+                                    {/* <img  className="logo-light" src="images/logo-full-white.png" srcset="images/logo-full-white2x.png 2x" alt="logo" /> */}
+                                </span>
+                            </div>
+
+                            <div className="header-nav-toggle">
+                                <span href="#" className="navbar-toggle" data-menu-toggle="example-menu-04">
+                                    <div className="toggle-line">
+                                        <span></span>
+                                    </div>
+                                </span>
+                            </div>
+
+                            <div className="header-navbar header-navbar-s3">
+                                <nav className="header-menu justify-content-between" id="example-menu-04">
+                                    <ul className="menu menu-s2 animated" data-animate="fadeInDown" data-delay=".75">
+                                        <li className="menu-item"> <a className="menu-link nav-link" href="/about">About Us </a></li>
+                                        <li className="menu-item"> <a className="menu-link nav-link" href="/cotact">Contact Us </a></li>
+                                        {/* <li  className="menu-item"> <span  className="menu-link nav-link" href="#team">Team </span></li>
+                                    <li  className="menu-item"> <span  className="menu-link nav-link" href="#token">Tokens </span></li>
+                                    <li  className="menu-item"> <span  className="menu-link nav-link" href="#roadmap">Roadmap </span></li> */}
+                                        <li className="menu-item has-sub">
+                                            <a className="menu-link nav-link menu-toggle" href="#more">More </a>
+                                            <ul className="menu-sub menu-drop">
+                                                <li className="menu-item"> <a className="menu-link nav-link" href="#faqs">Faqs </a></li>
+                                                <li className="menu-item"> <a className="menu-link nav-link" href="#press">Press </a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul className="menu-btns align-items-center animated" data-animate="fadeInDown" data-delay=".85">
+                                        <li> <span href="#" className="btn btn-rg btn-round btn-primary"><button onClick={loginWithRedirect} className='login-btn'>Log in</button> </span></li>
+                                        <li className="language-switcher toggle-wrap">
+                                            <span className="btn btn-rg btn-round btn-outline btn-primary toggle-tigger tc-light" href="#">
+                                                <img className="language-flag" src="images/flag-en.jpg" alt="en" /><span>En</span> <em className="icon ti ti-angle-down"></em>
+                                            </span>
+                                            <ul className="toggle-class toggle-drop drop-list drop-list-sm">
+                                                <li> <a href="#my"><img className="language-flag" src="images/flag-fr.jpg" alt="fr" />MY </a></li>
+                                                <li> <a href="#en"><img className="language-flag" src="images/flag-en.jpg" alt="br" />En </a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className="App">
                     Hello {user.name}{' '}
                     <button onClick={() => logout({ returnTo: window.location.origin })}>
@@ -115,22 +167,22 @@ function App() {
                                         <div className="container container-z">
                                             <div className="row align-items-center justify-content-center">
                                                 <div className="col-lg-12 col-xl-10 text-center">
-                                                    <div className="banner-caption wide-auto-xl pdb-l pdt-r tc-light">
-                                                        <div className="cpn-head mb-5">
-                                                            <h1 className="title title-md animated" data-animate="fadeInUp" data-delay="1.25">RCE Iskandar Sustainable and Low Carbon Schools Exhibition</h1>
+                                                    <div className="banner-caption wide-auto-xl pdb-l pdt-r tc-light mt-5">
+                                                        <div className="cpn-head mb-0">
+                                                            <h1 className="title title-md animated" data-animate="fadeInUp" data-delay="1.25">Welcome to RCE Iskandar Sustainable and Low Carbon Schools Exhibition</h1>
                                                         </div>
                                                         <div className="cpn-text cpn-text-s1 cpn-text-center mt-5">
-                                                            <p className="lead animated" data-animate="fadeInUp" data-delay="1.35">Iskandar Malaysia is honourably acknowledged by the United Nations University-Institute for the
-                                                                Advanced Study of Sustainability (UNU-AS) as RCE Iskandar in December 2014. Regional Centre of Expertise (RCE) Iskandar is the third RCE in Malaysia, after RCE Penang and RCE Central Malaysia.</p>
+                                                            {/* <p className="lead animated" data-animate="fadeInUp" data-delay="1.35">Iskandar Malaysia is honourably acknowledged by the United Nations University-Institute for the
+                                                                Advanced Study of Sustainability (UNU-AS) as RCE Iskandar in December 2014. Regional Centre of Expertise (RCE) Iskandar is the third RCE in Malaysia, after RCE Penang and RCE Central Malaysia.</p> */}
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="col-xl-8 col-lg-10">
+                                                <div className="col-xl-8 col-lg-10 mt-5">
                                                     <div className="tc-light text-center pdb-r">
-                                                        <span className="badge badge-sm badge-warning px-4 animated" data-animate="fadeInUp" data-delay="1.45">RCE Iskandar </span>
-                                                        <p className="lead animated" data-animate="fadeInUp" data-delay="1.55">Universiti Teknologi Malaysia (UTM) and Iskandar Regional Development Authority (IRDA) are the RCE Iskandar Secretariat, offering support on the coordination and management of sustainable development activities in the Iskandar Malaysia region.</p>
+                                                        <span className="badge badge-sm badge-warning px-4 animated" data-animate="fadeInUp" data-delay="1.45">RCE Iskandar <b>DASHBOARD</b></span>
+                                                        {/* <p className="lead animated" data-animate="fadeInUp" data-delay="1.55">Universiti Teknologi Malaysia (UTM) and Iskandar Regional Development Authority (IRDA) are the RCE Iskandar Secretariat, offering support on the coordination and management of sustainable development activities in the Iskandar Malaysia region.</p> */}
                                                     </div>
-                                                    <div className="token-status bg-white token-status-s6 shadow-dark round mb-5 animated d-none" data-animate="fadeInUp" data-delay="1.65">
+                                                    <div className="token-status bg-white token-status-s6 shadow-dark round mb-5 animated" data-animate="fadeInUp" data-delay="1.65">
                                                         {/* <h6  className="title title-xs-alt fw-4 tc-default">Round one sales ends in:</h6> */}
                                                         <div className="countdown-s3 countdown-s5 countdown-large countdown-thin countdown" data-date="2021/08/10"></div>
                                                         {/* <div  className="progress-wrap progress-wrap-point">
@@ -147,22 +199,21 @@ function App() {
                                             </div> */}
                                                         <ul className="cpn-links flex-wrap flex-sm-nowrap cpn-links-s1 pt-0 pb-3 pb-sm-0 mb-5">
                                                             {/* <li  className="order-sm-0"> <span href="https://www.youtube.com/watch?v=SSo_EIwHSd4"  className="link link-xs link-light video-popup"><em  className="link-icon fas fa-play"></em><span>Watch Video</span> </span></li> */}
-                                                            <li className="order-sm-0 order-last w-100"> <span href="#" className="btn btn-round btn-primary btn-lg">Register and upload you file Now </span></li>
+                                                            <li className="order-sm-0 order-last w-100"> <span href="#" className="btn btn-round btn-primary btn-lg">Register and upload your file from here </span></li>
                                                             {/* <li  className="order-sm-0"> <span href="#"  className="link link-xs link-light"><em  className="link-icon fas fa-file"></em><span>White Paper</span> </span></li> */}
                                                         </ul>
-                                                        {/* <ul  className="icon-list fz-7 pt-3 tc-alternet">
+                                                        <ul  className="icon-list fz-7 pt-3 tc-alternet">
                                                 <li>WE ACCEPTED:</li>
-                                                <li><em  className="fab fa-bitcoin"></em></li>
-                                                <li><em  className="fas fa-pound-sign"></em></li>
-                                                <li><em  className="fas fa-dollar-sign"></em></li>
-                                            </ul> */}
+                                                <li><em  className="fas fa-image s-20"></em></li>
+                                                <li><em  className="fas fa-file-pdf s-20"></em></li>
+                                            </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="nk-ovm ovm-top ovm-h-80 bg-theme-alt "></div>
+                                <div className="nk-ovm ovm-top ovm-h-80 bg-theme-alt d-lg-none"></div>
                             </div>
                         </div>
                     </header>
@@ -171,11 +222,6 @@ function App() {
                 </div>
             </body>
         </>;
-        // return <div className="App">
-        //   <button onClick={loginWithRedirect}>Log in</button>
-        //   <Title />
-        //   <UploadForm selectedImg={selectedImg} setSelectedImg={setSelectedImg}/>
-        // </div>;
     }
 }
 
