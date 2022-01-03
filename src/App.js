@@ -30,11 +30,11 @@ function App() {
         return (
             <>
                 <header className='ak-nav'>
-                    <h1 class="ak-logo">RCE</h1>
+                    <h1 className="ak-logo">RCE</h1>
                     <nav>
-                        <ul class="nav_links">
-                            <li><a href="#">Announcement</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                        <ul className="nav_links">
+                            <li><a href="/">Announcement</a></li>
+                            <li><a href="/">Contact Us</a></li>
                             {/* <li><a href="#">Resume</a></li> */}
                         </ul>
                     </nav>
