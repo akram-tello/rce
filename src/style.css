@@ -7088,7 +7088,8 @@ background: #f5f5f5;
 }
 
 .ak-btn:hover {
-  background-color: rgba(0, 136, 169, 0.8);
+  background-color: #f6be26;
+  color: #ffff;
 }
 .ak-title{
   margin-top: 3rem;
@@ -7112,9 +7113,11 @@ background: #f5f5f5;
 .ak-box{
   border: none;
     padding: 35px 50px 45px;
-    background: aliceblue;
+    background: #fff;
     max-width: 900px !important;
     margin: auto;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .mb-6remm{
   margin-bottom: 6rem;

@@ -48,6 +48,9 @@ const UploadForm = () => {
                       {file && <div>{file.name}</div>}
                       {file && <ProgressBar file={file} setFile={setFile} />}
                     </div>
+                    <div><h5>We accept:</h5>
+                      <p>image / pdf </p>
+                    </div>
                   </form>
                 </div>
               </div>
