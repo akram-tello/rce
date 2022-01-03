@@ -4,7 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import UploadForm from './comps/UploadForm';
 import Homepage from './comps/Homepage';
 import ImageGrid from './comps/ImageGrid';
-import Modal from './comps/Modal';
+// import Modal from './comps/Modal';
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         logout,
     } = useAuth0();
 
-    const [selectedImg, setSelectedImg] = useState(null);
+    const [setSelectedImg] = useState(null);
 
     if (isLoading) {
         return <div>Loading...</div>;
