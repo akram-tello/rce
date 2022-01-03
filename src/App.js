@@ -29,18 +29,113 @@ function App() {
     if (isAuthenticated) {
         return (
             <>
-                {/* <Homepage /> */}
-                <div className="App">
-                    Hello {user.name}{' '}
-                    <button onClick={() => logout({ returnTo: window.location.origin })}>
+                <header className='ak-nav'>
+                    <h1 class="ak-logo">RCE</h1>
+                    <nav>
+                        <ul class="nav_links">
+                            <li><a href="#">Announcement</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            {/* <li><a href="#">Resume</a></li> */}
+                        </ul>
+                    </nav>
+                    <button className='ak-btn' onClick={() => logout({ returnTo: window.location.origin })}>
                         Log out
                     </button>
-                    <UploadForm />
-                    <ImageGrid setSelectedImg={setSelectedImg} />
-                    {selectedImg && (
-                        <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
-                    )}
-                </div>
+                    <p className='ak-user'> Hello {user.name}{' '}</p>
+                </header>
+                <UploadForm />
+                <ImageGrid setSelectedImg={setSelectedImg} />
+                {/* {selectedImg && (
+                    <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+                )} */}
+                <footer className="nk-footer bg-theme-alt">
+                    <div className="social-overlap">
+                        <div className="container">
+                            <div className="row justify-content-center">
+                                <div className="col-sm-10">
+                                    <ul className="social-bar bg-white round shadow-heavy animated" data-animate="fadeInUp" data-delay=".1">
+                                        <li className="social-bar-title"><span>Follow us</span></li>
+                                        <li> <span href="#"><em className="icon fab fa-facebook-f"></em> </span></li>
+                                        <li> <span href="#"><em className="icon fab fa-twitter"></em> </span></li>
+                                        <li> <span href="#"><em className="icon fab fa-youtube"></em> </span></li>
+                                        <li> <span href="#"><em className="icon fab fa-github"></em> </span></li>
+                                        <li> <span href="#"><em className="icon fab fa-bitcoin"></em> </span></li>
+                                        <li> <span href="#"><em className="icon fab fa-medium-m"></em> </span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="nk-ovm ovm-top ovm-h-50 bg-white"></div>
+                    </div>
+                    <div className="section section-m section-footer bg-transparent tc-light">
+                        <div className="container">
+
+                            <div className="nk-block block-footer mgb-m50 mgt-m10">
+                                <div className="row justify-content-center">
+                                    <div className="col-lg-3 col-sm-10">
+                                        <div className="wgs animated" data-animate="fadeInUp" data-delay=".2">
+                                            <h2 className="text-white">RCE</h2>
+                                            {/* <span href="#"><img src="images/logo-full-white.png" srcset="images/logo-full-white2x.png 2x" alt="logo" /> </span> */}
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-2 col-mb-3 col-sm-3 col-6">
+                                        <div className="wgs wgs-menu">
+                                            <div className="wgs-body">
+                                                <ul className="wgs-links wgs-links-uline wgs-links-s4 animated" data-animate="fadeInUp" data-delay=".3">
+                                                    <li> <span href="#"> Schools </span></li>
+                                                    <li> <span href="#">why / How ? </span></li>
+                                                    <li> <span href="#">Media </span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-2 col-mb-3 col-sm-3 col-6">
+                                        <div className="wgs wgs-menu">
+                                            <div className="wgs-body">
+                                                <ul className="wgs-links wgs-links-uline wgs-links-s4 animated" data-animate="fadeInUp" data-delay=".4">
+                                                    <li> <span href="#">Teams </span></li>
+                                                    <li> <span href="#">About </span></li>
+                                                    <li> <span href="#">Contact </span></li>
+                                                    <li> <span href="#">Faqs </span></li>
+                                                    <li> <span href="#">Join Us </span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-3 col-mb-6 col-sm-4">
+                                        <div className="wgs wgs-menu">
+                                            <div className="wgs-body">
+                                                <ul className="wgs-address animated" data-animate="fadeInUp" data-delay=".5">
+                                                    <li>Johor, Skudai <br />Taman Universiti, Jalan Pendidikan 1</li>
+                                                    <li>+182-390-395</li>
+                                                    <li> <span href="#">hello@RCE.io </span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr className="hr-white-10 my-0" />
+                    <div className="section py-5 tc-light">
+                        <div className="container">
+                            <div className="row justify-content-center align-items-center">
+                                <div className="col-md-7">
+                                    <div className="copyright-text copyright-text-s3 op-70">
+                                        <p><span>Copyright &copy; 2021, RCE Iskander.</span></p>
+                                    </div>
+                                </div>
+                                <div className="col-md-5 text-md-right">
+                                    <ul className="footer-links">
+                                        <li> <span href="#">Privacy Policy </span></li>
+                                        <li> <span href="#">Terms &amp; Conditions </span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
             </>
 
         );
@@ -73,18 +168,18 @@ function App() {
                                     <div className="header-navbar header-navbar-s3">
                                         <nav className="header-menu justify-content-between" id="example-menu-04">
                                             <ul className="menu menu-s2 animated" data-animate="fadeInDown" data-delay=".75">
-                                                <li className="menu-item"> <a className="menu-link nav-link" href="/about">About Us </a></li>
-                                                <li className="menu-item"> <a className="menu-link nav-link" href="/cotact">Contact Us </a></li>
+                                                {/* <li className="menu-item"> <a className="menu-link nav-link" href="/about">About Us </a></li> */}
+                                                {/* <li className="menu-item"> <a className="menu-link nav-link" href="/cotact">Contact Us </a></li> */}
                                                 {/* <li  className="menu-item"> <span  className="menu-link nav-link" href="#team">Team </span></li>
                                     <li  className="menu-item"> <span  className="menu-link nav-link" href="#token">Tokens </span></li>
                                     <li  className="menu-item"> <span  className="menu-link nav-link" href="#roadmap">Roadmap </span></li> */}
-                                                <li className="menu-item has-sub">
+                                                {/* <li className="menu-item has-sub">
                                                     <a className="menu-link nav-link menu-toggle" href="#more">More </a>
                                                     <ul className="menu-sub menu-drop">
                                                         <li className="menu-item"> <a className="menu-link nav-link" href="#faqs">Faqs </a></li>
                                                         <li className="menu-item"> <a className="menu-link nav-link" href="#press">Press </a></li>
                                                     </ul>
-                                                </li>
+                                                </li> */}
                                             </ul>
                                             <ul className="menu-btns align-items-center animated" data-animate="fadeInDown" data-delay=".85">
                                                 <li> <span href="#" className="btn btn-rg btn-round btn-primary"><button onClick={loginWithRedirect} className='login-btn'>Log in</button> </span></li>

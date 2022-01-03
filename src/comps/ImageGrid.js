@@ -3,7 +3,7 @@ import useFirestore from '../hooks/useFirestore';
 import { motion } from 'framer-motion';
 
 const ImageGrid = ({ setSelectedImg }) => {
-  const { docs } = useFirestore('images');
+  const { docs } = useFirestore('files');
 
   return (
     <div className="img-grid">
@@ -13,7 +13,8 @@ const ImageGrid = ({ setSelectedImg }) => {
           whileHover={{ opacity: 1 }}s
           onClick={() => setSelectedImg(doc.url)}
         >
-          <motion.img src={doc.url} alt="uploaded pic"
+          {console.log(doc)}
+          <motion.img src={doc.url} alt="uploaded pdf File"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
